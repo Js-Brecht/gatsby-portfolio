@@ -1,0 +1,42 @@
+.footer {
+  height: 150px;
+  width: 100%;
+  background: #FFF;
+  color: #1A1A1A;
+  font-family: 'Open Sans';
+  padding: 2rem 4rem;
+  .info {
+    display: flex;
+    justify-content: space-between;
+    font-size: calc(12px + (12 - 12) * ((100vw - 300px) / (1600 - 300)));
+  }
+  .bar {
+    border-bottom: 1px solid #000;
+    margin: 12px 0;
+  }
+  .social-link {
+    color: #1a1a1a;
+    text-decoration: none;
+    margin-left: 1.4rem;
+    transition: color 0.5s ease;
+    &:hover {
+      color: #e61428;
+    }
+  }
+}
+
+.mo {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .mo {
+    display: block;
+  }
+  .dt {
+    display: none;
+  }
+  .footer {
+    padding: 2rem 2rem;
+  }
+}

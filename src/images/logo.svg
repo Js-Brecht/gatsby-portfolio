@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="486px" height="330px" viewBox="0 0 486 330" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+    <title>logo copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="48.5527284%" y1="0%" x2="34.0362967%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#FFD700" offset="0%"></stop>
+            <stop stop-color="#DAA520" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="40.3955027%" y1="100%" x2="73.1370564%" y2="1.94774687%" id="linearGradient-2">
+            <stop stop-color="#FFD700" offset="0%"></stop>
+            <stop stop-color="#DAA520" offset="100%"></stop>
+        </linearGradient>
+        <path d="M244.682912,5.81598437 C277.333682,5.81598437 358.508531,5.81598437 358.508531,5.81598437 C325.958114,34.5513 285.198334,269.249578 239.393297,315.661688 C188.64646,315.661688 180.726702,311.939031 130.076891,311.939031 C166.97029,274.367506 218.205315,30.2775491 244.682912,5.81598437 Z" id="path-3"></path>
+        <filter x="-7.2%" y="-5.0%" width="113.6%" height="110.0%" filterUnits="objectBoundingBox" id="filter-4">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.22 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feOffset dx="-1" dy="0" in="SourceAlpha" result="shadowOffsetOuter2"></feOffset>
+            <feGaussianBlur stdDeviation="5" in="shadowOffsetOuter2" result="shadowBlurOuter2"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.15 0" type="matrix" in="shadowBlurOuter2" result="shadowMatrixOuter2"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="shadowMatrixOuter2"></feMergeNode>
+            </feMerge>
+        </filter>
+        <linearGradient x1="63.9531092%" y1="0%" x2="34.5566902%" y2="100%" id="linearGradient-5">
+            <stop stop-color="#1A1A1A" offset="0%"></stop>
+            <stop stop-color="#3A3A3A" offset="49.5497155%"></stop>
+            <stop stop-color="#000000" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD" transform="translate(-698.000000, -75.000000)">
+            <g id="logo-copy" transform="translate(698.000000, 79.000000)">
+                <path d="M363.864,319 C372.032573,310.510417 376.007834,271.131886 375.789781,200.864407 L463.494802,200.864407 L463.494802,123.454802 L375.33999,123.454802 L375.33999,89.6624294 L485.538735,89.6624294 L485.538735,0 L280.538735,0 C283.048547,188.154948 279.073635,294.488281 268.614,319 C305.522203,319 316.732095,319 363.864,319 Z" id="Path" fill="url(#linearGradient-1)" fill-rule="nonzero"></path>
+                <path d="M126.388575,0.232 C156.047156,0.232 186.538965,0.232 217.864,0.232 L114.241035,319.232 L0.864,319.232 C67.2065519,118.98158 109.048077,12.6482471 126.388575,0.232 Z" id="Rectangle" fill="url(#linearGradient-2)"></path>
+                <g id="shadow" transform="translate(244.292711, 160.738836) scale(-1, 1) translate(-244.292711, -160.738836) " fill="black" fill-opacity="1">
+                    <use filter="url(#filter-4)" xlink:href="#path-3"></use>
+                </g>
+                <path d="M250.037403,0 C282.688173,0 363.864,0 363.864,0 C331.312605,28.7353156 268.096775,302.781951 242.389041,319 C191.642204,319 176.513812,319 125.864,319 C162.7574,281.428474 223.559806,24.4615647 250.037403,0 Z" id="Rectangle-Copy" fill="url(#linearGradient-5)" transform="translate(244.864000, 159.500000) scale(-1, 1) translate(-244.864000, -159.500000) "></path>
+            </g>
+        </g>
+    </g>
+</svg>

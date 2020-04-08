@@ -1,0 +1,27 @@
+---
+company: "Apple"
+featuredImage: "./featured-image.jpg"
+role: "Lead Visual Designer"
+type: "Product Design"
+intro: "In accordance with Apple confidentiality policies, this project is not available online. Please submit a request for approved references that can speak to the nature of the work." 
+--- 
+import { graphql } from "gatsby";
+
+export const query = graphql`
+  query {
+    apple1: file(relativePath: { eq: "Apple/apple.jpg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`
+
+<GridTwo>
+
+<ImageContainer classes="small" fluid={props.data.apple1.childImageSharp.fluid} />
+
+</GridTwo>
+
