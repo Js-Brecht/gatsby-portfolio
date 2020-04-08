@@ -1,7 +1,7 @@
 import React from "react";
 import { graphql, Link } from "gatsby";
 import { MDXProvider } from "@mdx-js/react";
-import { MDXRenderer } from "gatsby-plugin-mdx";
+// import { MDXRenderer } from "gatsby-plugin-mdx";
 
 import DarkLayout from "../components/layout/DarkLayout";
 import { PWD, GridTwo, ImageContainer } from "../components/grid/grid";
@@ -12,19 +12,19 @@ import "../styles/pages.scss";
 
 const shortcodes = { GridTwo, ImageContainer } // Provide common components here
 
-const ProjectPage = ({ data: { mdx }, pageContext }) => {
+const ProjectPage = ({ pageContext, children }) => {
   const { prev, next } = pageContext
   return (
     <DarkLayout>
       <PWD>
         <PostHeader 
-          company={mdx.frontmatter.company}
-          role={mdx.frontmatter.role}
-          type={mdx.frontmatter.type}
-          intro={mdx.frontmatter.intro}
+          company={pageContext.frontmatter.company}
+          role={pageContext.frontmatter.role}
+          type={pageContext.frontmatter.type}
+          intro={pageContext.frontmatter.intro}
         />
         <MDXProvider components={shortcodes}>
-          <MDXRenderer>{mdx.body}</MDXRenderer>
+          {children}
         </MDXProvider>
         <footer className={templateStyles.footer}>
           <div className={templateStyles.footerWrapper}>
@@ -53,17 +53,17 @@ const ProjectPage = ({ data: { mdx }, pageContext }) => {
 
 export default ProjectPage
 
-export const pageQuery = graphql`
-  query PortfolioPostQuery($id: String) {
-    mdx(id: { eq: $id }) {
-      id
-      body
-      frontmatter {
-        company
-        role
-        type
-        intro
-      }
-    }
-  }
-`
+// export const pageQuery = graphql`
+//   query PortfolioPostQuery($id: String) {
+//     mdx(id: { eq: $id }) {
+//       id
+//       body
+//       frontmatter {
+//         company
+//         role
+//         type
+//         intro
+//       }
+//     }
+//   }
+// `

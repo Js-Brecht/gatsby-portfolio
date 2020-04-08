@@ -34,6 +34,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         edges {
           node {
             id
+            fileAbsolutePath
             fields {
               slug
               sourceInstanceName
@@ -59,8 +60,9 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   portfolioEdge.forEach(({node}, index ) => {
     createPage({
       path: `/portfolio/${node.fields.slug}`,
-      component: path.resolve(`./src/templates/portfolio.js`),
-      context: { 
+      // component: path.resolve(`./src/templates/portfolio.js`),
+      component: node.fileAbsolutePath,
+      context: {
         id: node.id,
         prev: index === 0 ? null : portfolioEdge[index - 1].node,
         next: index === (portfolioEdge.length - 1) ? null : portfolioEdge[index + 1].node
@@ -71,7 +73,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   journalEdge.forEach(({node}, index ) => {
     createPage({
       path: `/journal/${node.fields.slug}`,
-      component: path.resolve(`./src/templates/journal.js`),
+      // component: path.resolve(`./src/templates/journal.js`),
+      component: node.fileAbsolutePath,
       context: {
         id: node.id,
         prev: index === 0 ? null : journalEdge[index - 1].node,

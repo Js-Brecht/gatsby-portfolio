@@ -1,7 +1,7 @@
 import React from "react";
 import { graphql, Link } from "gatsby";
 import { MDXProvider } from "@mdx-js/react";
-import { MDXRenderer } from "gatsby-plugin-mdx";
+// import { MDXRenderer } from "gatsby-plugin-mdx";
 
 import LightLayout from "../components/layout/LightLayout";
 import { PWL, GridTwo } from "../components/grid/grid";
@@ -12,18 +12,18 @@ import "../styles/pages.scss";
 
 const shortcodes = { GridTwo } // Provide common components here
 
-const JournalPage = ({ data: { mdx }, pageContext }) => {
+const JournalPage = ({ pageContext, children }) => {
   const { prev, next } = pageContext
   return (
     <LightLayout>
       <PWL>
         <PostHeader
-          company={mdx.frontmatter.title}
-          type={mdx.frontmatter.date}
-          intro={mdx.frontmatter.intro}
+          company={pageContext.frontmatter.title}
+          type={pageContext.frontmatter.date}
+          intro={pageContext.frontmatter.intro}
         />
         <MDXProvider components={shortcodes}>
-        <MDXRenderer>{mdx.body}</MDXRenderer>
+          {children}
         </MDXProvider>
         <footer className={templateStyles.footer}>
           <div className={templateStyles.footerWrapper}>
@@ -52,16 +52,16 @@ const JournalPage = ({ data: { mdx }, pageContext }) => {
 
 export default JournalPage
 
-export const pageQuery = graphql`
-  query JournalPostQuery($id: String) {
-    mdx(id: { eq: $id } ) {
-      id
-      body
-      frontmatter {
-        title
-        date(formatString: "MMMM DD, YYYY")
-        intro
-      }
-    }
-  }
-`
+// export const pageQuery = graphql`
+//   query JournalPostQuery($id: String) {
+//     mdx(id: { eq: $id } ) {
+//       id
+//       body
+//       frontmatter {
+//         title
+//         date(formatString: "MMMM DD, YYYY")
+//         intro
+//       }
+//     }
+//   }
+// `

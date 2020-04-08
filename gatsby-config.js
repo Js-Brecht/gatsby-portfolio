@@ -1,3 +1,5 @@
+const path = require('path');
+
 module.exports = {
   siteMetadata: {
     title: `Full Stack Designer`,
@@ -30,6 +32,10 @@ module.exports = {
     {
       resolve: "gatsby-plugin-mdx",
       options: {
+        defaultLayouts: {
+          portfolio: path.resolve(`./src/templates/portfolio.js`),
+          journal: path.resolve(`./src/templates/journal.js`),
+        },
         gatsbyRemarkPlugins: [
           {
             resolve: "gatsby-remark-images",
